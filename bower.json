@@ -1,0 +1,20 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "authors": [
+    "tianxiangbing <55342775@qq.com>"
+  ],
+  "description": "test1",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.13.10",
+    "ember-data": "~1.13.11"
+  }
+}
