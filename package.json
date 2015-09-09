@@ -1,0 +1,26 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "首页我们要做的是从网上下载下来emberjs相关的文件,目前在1.x的版本中，ember是要依赖jquery（v1.7.1~2.2.0) 和handlebars(v1.x)的，有一个比较好的方式来得到这些资源，那就是用[bower](http://bower.io/).bower的安装很简单:",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tianxiangbing/emberjs-test.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "tianxiangbing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tianxiangbing/emberjs-test/issues"
+  },
+  "homepage": "https://github.com/tianxiangbing/emberjs-test",
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
