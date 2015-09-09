@@ -16,6 +16,6 @@
     "commit": "969e540b937acf7faf3d4b6b56d21a5c8b8a85f3"
   },
   "_source": "git://github.com/components/ember.git",
-  "_target": "~1.13.10",
+  "_target": ">= 1.8.1 < 2.0.0",
   "_originalSource": "ember"
 }

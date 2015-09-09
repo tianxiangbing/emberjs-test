@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "ember": "~1.13.10",
-    "ember-data": "~1.13.11"
+    "jquery": "~1.9.1",
+    "ember": "~1.13.10"
   }
 }
