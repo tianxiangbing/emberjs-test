@@ -35,9 +35,6 @@ App.AddController = Ember.Controller.extend({
 App.IndexRoute = Ember.Route.extend({
 	model: function() {
 		return data
-	},
-	setupController: function(controller) {
-		controller.set('model', data);
 	}
 });
 
