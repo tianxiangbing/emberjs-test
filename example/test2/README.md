@@ -101,3 +101,15 @@ ok,还是新建一个.html页面和一个app.js文件，然后在html中引入js
 	}
 
 修改的操作和【[初学emberjs](../test1/README.md "初学emberjs")】里的类似，这里就不重复贴了，我会在后面的源码中加入这个代码功能。
+
+	update: function() {
+		var content = this.get('content');
+		content.save();
+	}
+*****
+	App.InfoRoute = Ember.Route.extend({
+		model: function(arg) {
+			console.log(arg)
+			return this.store.find('test', arg.id);
+		}
+	});
