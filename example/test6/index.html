@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EmberFest</title>
+</head>
+<body>
+  <script type="text/x-handlebars">
+  {{#link-to "index"}}index{{/link-to}}
+  {{#link-to "talks"}}talks{{/link-to}}
+  {{outlet}}
+  </script>
+  <script type="text/x-handlebars" id="talks">
+  	<h1>talks</h1>
+{{#each model}}
+	<li>{{#link-to "talk" this}}{{talkTitle}}{{/link-to}}</li>
+{{/each}}
+{{outlet}}
+  </script>
+  <script type="text/x-handlebars" id="talk">
+  {{talkTitle}}
+  <p>{{talkText}}</p>
+  </script>
+  <script src="http://127.0.0.1:9090/livereload.js"></script>
+  <script type="text/javascript" src="../../bower_components/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/handlebars/handlebars.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember/ember-template-compiler.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember/ember.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/model.js"></script>
+  <script type="text/javascript" src="js/route.js"></script>
+</body>
+</html>

@@ -11,7 +11,11 @@
 	<button {{action "add"}}>添加</button>
 	<ol>
 	{{#each model}}
-	<li>{{title}} <button {{action "del" this}}>删除</button>{{#link-to "info" this}}查看{{/link-to}}</li>
+	<li>{{title}} <button {{action "del" this}}>删除</button>{{#link-to "info" this}}查看{{/link-to}}
+	{{#if introduction}}
+		<br>{{introduction}}
+	{{/if}}
+	</li>
 	{{/each}}
 	</ol>
 	{{outlet}}

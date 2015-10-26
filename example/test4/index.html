@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>handlebars</title>
+	<script src="http://127.0.0.1:9090/livereload.js"></script>
+</head>
+<body>
+	<script type="text/x-handlebars">
+	hello,welcome,{{user.fullname}}
+	{{outlet}}
+	</script>
+	<script type="text/x-handlebars" id="index">
+index
+	{{view App.BooksView}}
+	</script>
+	<script type="text/x-handlebars" id="book">
+	=={{name}}
+	</script>
+	<script type="text/x-handlebars" id="books" templateName="books">
+		<div class="books">Book Catalog
+				{{#each  books}}
+				<li>
+					{{name}}
+					{{view App.BookDetailView}}
+					{{partial "book"}}
+				</li>
+				{{/each}}
+		</div>
+	</script>
+  <script type="text/javascript" src="../../bower_components/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/handlebars/handlebars.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember/ember-template-compiler.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember/ember.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

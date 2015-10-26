@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ember-data</title>
+	<script src="http://localhost:9090/livereload.js"></script>
+</head>
+<body>
+	<script type="text/x-handlebars" id="application">
+		<div>{{#link-to "index"}}首页{{/link-to}}
+		{{#link-to "about"}}关于我们{{/link-to}}
+		</div>
+	{{outlet}}
+	</script>
+	<script type="text/x-handlebars" id="list/index">
+	<ol>
+	{{#each model}}
+	<li>{{#link-to "list.info" this}} {{title}}{{/link-to}}</li>
+	{{/each}}
+	</ol>
+	</script>
+	<script type="text/x-handlebars" id="list/info">
+        {{#linkTo "list.index"}}&lt; back{{/linkTo}}<br />
+        <h1>{{controllers.list.xxx}}</h1>
+	{{convertMarkdown html}}
+        <br />{{#linkTo "list.index"}}&lt; back{{/linkTo}}
+	</script>
+	<script type="text/x-handlebars" id="about">
+	about
+	</script>
+  <script type="text/javascript" src="../../bower_components/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/handlebars/handlebars.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember/ember-template-compiler.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember/ember.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember-data/ember-data.min.js"></script>
+  <script type="text/javascript" src="js/showdown.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

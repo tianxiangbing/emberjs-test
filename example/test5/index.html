@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ember</title>
+	<script src="http://127.0.0.1:9090/livereload.js"></script>
+</head>
+<body>
+	<script type="text/x-handlebars" id="application">
+	{{outlet}}
+	</script>
+	<script type="text/x-handlebars" id="index">
+	index <br>
+	{{#each model}}
+		{{name}} <br>
+	{{/each}}
+	</script>
+  <script type="text/javascript" src="../../bower_components/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/handlebars/handlebars.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember/ember-template-compiler.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember/ember.min.js"></script>
+  <script type="text/javascript" src="../../bower_components/ember-data/ember-data.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/model.js"></script>
+  <script type="text/javascript" src="js/route.js"></script>
+  <script type="text/javascript" src="js/controller.js"></script>
+</body>
+</html>

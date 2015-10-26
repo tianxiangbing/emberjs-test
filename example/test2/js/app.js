@@ -23,7 +23,14 @@ App.InfoRoute = Ember.Route.extend({
 /** Ember Data **/
 App.Test = DS.Model.extend({
 	title: DS.attr('string'),
-	desc: DS.attr('string')
+	desc: DS.attr('string'),
+	introduction:function(){
+		var intro = '';
+		if(this.get('desc')){
+			intro = this.get('desc').substring(0,20);
+		}
+		return intro;
+	}.property('desc')
 });
 App.ApplicationAdapter = DS.LSAdapter.extend({
 	namespace: 'test2'
@@ -55,6 +62,7 @@ App.InfoController = Ember.ObjectController.extend({
 		update: function() {
 			var content = this.get('content');
 			content.save();
+			this.set('isediting', false);
 		},
 		edit: function() {
 			this.set('isediting', true);

@@ -1,0 +1,1 @@
+var Montric = Ember.Application.create();
