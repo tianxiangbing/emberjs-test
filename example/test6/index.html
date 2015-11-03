@@ -8,6 +8,7 @@
   <script type="text/x-handlebars">
   {{#link-to "index"}}index{{/link-to}}
   {{#link-to "talks"}}talks{{/link-to}}
+  {{com-test}}
   {{outlet}}
   </script>
   <script type="text/x-handlebars" id="talks">
@@ -20,6 +21,9 @@
   <script type="text/x-handlebars" id="talk">
   {{talkTitle}}
   <p>{{talkText}}</p>
+  </script>
+    <script type="text/x-handlebars" id="components/com-test">
+    <div>test components</div>
   </script>
   <script src="http://127.0.0.1:9090/livereload.js"></script>
   <script type="text/javascript" src="../../bower_components/jquery/jquery.min.js"></script>
